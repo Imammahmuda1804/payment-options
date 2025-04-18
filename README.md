@@ -2,6 +2,12 @@
 
 A simple Go web service to simulate multiple payment methods for implementing goroutine-based parallel processing.
 
+##Clone repo
+```bash
+git clone https://github.com/Imammahmuda1804/payment-options.git
+cd payment-options
+```
+
 ## Run the App
 ```bash
 go mod init payment-options

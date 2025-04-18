@@ -23,43 +23,49 @@ func (u *paymentUsecase) GetPaymentOptions() (map[string]models.PaymentMethod, e
 
 	go func() {
 		defer wg.Done()
+		method := u.repo.CallBCA()
 		mu.Lock()
-		result["ovo"] = u.repo.CallOVO()
+		result["bca"] = method
 		mu.Unlock()
 	}()
 
 	go func() {
 		defer wg.Done()
+		method := u.repo.CallMandiri()
 		mu.Lock()
-		result["dana"] = u.repo.CallDANA()
+		result["mandiri"] = method
 		mu.Unlock()
 	}()
 
 	go func() {
 		defer wg.Done()
+		method := u.repo.CallBNI()
 		mu.Lock()
-		result["gopay"] = u.repo.CallGoPay()
+		result["bni"] = method
 		mu.Unlock()
 	}()
 
 	go func() {
 		defer wg.Done()
+		method := u.repo.CallBRI()
 		mu.Lock()
-		result["shopee"] = u.repo.CallShopee()
+		result["bri"] = method
 		mu.Unlock()
 	}()
 
 	go func() {
 		defer wg.Done()
+		method := u.repo.CallCIMB()
 		mu.Lock()
-		result["oneklik"] = u.repo.CallOneKlik()
+		result["cimb"] = method
 		mu.Unlock()
 	}()
 
 	go func() {
 		defer wg.Done()
+		method := u.repo.CallPermata()
 		mu.Lock()
-		result["bridd"] = u.repo.CallBRIDD()
+		result["permata"] = method
 		mu.Unlock()
 	}()
 

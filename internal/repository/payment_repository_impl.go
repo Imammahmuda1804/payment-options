@@ -11,57 +11,62 @@ func NewPaymentRepo() PaymentRepository {
 	return &paymentRepo{}
 }
 
-func (r *paymentRepo) CallOVO() models.PaymentMethod {
-	time.Sleep(2 * time.Second) // Simulate network delay
+func (r *paymentRepo) CallBCA() models.PaymentMethod {
+	time.Sleep(1 * time.Second)
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "1234567890",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/ovo.jpg",
+		Balance: "100000",
+		Icon:    "https://sampleurl.com/bca.jpg",
 	}
 }
 
-func (r *paymentRepo) CallDANA() models.PaymentMethod {
+func (r *paymentRepo) CallMandiri() models.PaymentMethod {
+	time.Sleep(1 * time.Second)
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "2345678901",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/dana.jpg",
+		Balance: "200000",
+		Icon:    "https://sampleurl.com/mandiri.jpg",
 	}
 }
 
-func (r *paymentRepo) CallGoPay() models.PaymentMethod {
+func (r *paymentRepo) CallBNI() models.PaymentMethod {
+	time.Sleep(1 * time.Second)
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "3456789012",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/gopay.jpg",
+		Balance: "300000",
+		Icon:    "https://sampleurl.com/bni.jpg",
 	}
 }
 
-func (r *paymentRepo) CallShopee() models.PaymentMethod {
+func (r *paymentRepo) CallBRI() models.PaymentMethod {
+	time.Sleep(1 * time.Second)
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "4567890123",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/shopee.jpg",
+		Balance: "400000",
+		Icon:    "https://sampleurl.com/bri.jpg",
 	}
 }
 
-func (r *paymentRepo) CallOneKlik() models.PaymentMethod {
+func (r *paymentRepo) CallCIMB() models.PaymentMethod {
+	time.Sleep(1 * time.Second)
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "5678901234",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/oneklik.jpg",
+		Balance: "500000",
+		Icon:    "https://sampleurl.com/cimb.jpg",
 	}
 }
 
-func (r *paymentRepo) CallBRIDD() models.PaymentMethod {
+func (r *paymentRepo) CallPermata() models.PaymentMethod {
+	time.Sleep(1 * time.Second)
 	return models.PaymentMethod{
-		Account: "6288xx",
+		Account: "6789012345",
 		Status:  "Active",
-		Balance: "10000",
-		Icon:    "https://sampleurl.com/bridd.jpg",
+		Balance: "600000",
+		Icon:    "https://sampleurl.com/permata.jpg",
 	}
 }
